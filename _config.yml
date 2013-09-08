@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         rdiscount
+pygments:         true
+
+# Permalinks
+permalink:        pretty
+
+# Server
+destination:      ./_gh_pages
+exclude:          [".editorconfig", ".gitignore", ".ruby-version", "bower.json", "composer.json", "CONTRIBUTING.md", "CNAME", "LICENSE", "Gruntfile.js", "package.json", "node_modules", "README.md", "less"]
+port:             9001
+
+# Custom vars
+current_version:  1.0.0
+repo:             https://github.com/szohr/home
+download:         https://github.com/szohr/home/archive/v1.0.0.zip
+download_dist:    https://github.com/szohr/home/releases/download/v1.0.0/szhr-1.0.0-dist.zip
+
+blog:             http://blog.szohr.com
+weixin:             http://szohr.weixin.com
+
+cdn_css:          //netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css
+cdn_theme_css:    //netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css
+cdn_js:           //netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js

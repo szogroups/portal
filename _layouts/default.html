@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include header.html %}
+    <!-- Place anything custom after this. -->
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip navigation</a>
+
+    <!-- Docs master nav -->
+    {% include nav-main.html %}
+
+    <!-- Docs page layout -->
+    <div class="bs-header" id="content">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.lead }}</p>
+        {% include ads.html %}
+      </div>
+    </div>
+
+    <!-- Callout for the old docs link -->
+    {% include old-bs-docs.html %}
+
+    <div class="container bs-docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="bs-sidebar hidden-print" role="complementary">
+            <ul class="nav bs-sidenav">
+              {% if page.slug == "company" %}
+                {% include nav-company.html %}
+              {% elsif page.slug == "product" %}
+                {% include nav-product.html %}
+              {% elsif page.slug == "politics" %}
+                {% include nav-politics.html %}
+              {% elsif page.slug == "download" %}
+                {% include nav-download.html %}
+              {% elsif page.slug == "question" %}
+                {% include nav-question.html %}
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+          {{ content }}
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        {% include social-buttons.html %}
+
+        <p></p>
+        <ul class="footer-links">
+          <li>当前版本 v{{ site.current_version }}</li>
+          <li class="muted">&middot;</li>
+          <li>中国 . 深圳 神州人力资源有限公司</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- JS and analytics only. -->
+    {% include footer.html %}
+
+  </body>
+</html>

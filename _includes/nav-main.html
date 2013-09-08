@@ -1,0 +1,32 @@
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{{ page.base_url }}" class="navbar-brand">神人集团</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li{% if page.slug == "company" %} class="active"{% endif %}>
+          <a href="{{ page.base_url }}company">公司简介</a>
+        </li>
+        <li{% if page.slug == "product" %} class="active"{% endif %}>
+          <a href="{{ page.base_url }}product">服务产品</a>
+        </li>
+        <li{% if page.slug == "politics" %} class="active"{% endif %}>
+          <a href="{{ page.base_url }}politics">政策法规</a>
+        </li>
+        <li{% if page.slug == "download" %} class="active"{% endif %}>
+          <a href="{{ page.base_url }}download">资源下载</a>
+        </li>
+        <li{% if page.slug == "question" %} class="active"{% endif %}>
+          <a href="{{ page.base_url }}question">常见问题</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
